@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Formulário</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JQuery -->
+	<script src="jquery-3.3.1.js"></script>
+
+	<script type="text/javascript">
+		
+		
+
+		function selecionar(id){
+
+			var data = new Date();
+
+			var ano  = data.getFullYear();
+			var mes  = data.getMonth()+1;
+			var dia  = data.getDate();
+			var hora = data.getHours();
+			var min  = data.getMinutes(); 
+
+			var numProtocolo = ano+''+mes+''+dia+''+hora+''+min;
+			
+			var opcao = $('input:radio[name=exampleRadios]:checked').val();
+			
+			if(opcao=='option2' || opcao=='option3' || opcao=='option4' || opcao=='option12'){
+
+				$('#'+id).show();
+				
+			}else{
+				$('#'+id).hide();
+
+				alert("Requisição concluida com sucesso!");
+				$('#numProtocolo').html(numProtocolo);
+				$('#protocolo').show();
+			}
+
+		}
+
+		function ok (){
+			alert("Sua Requisição foi enviada para avaliação!");
+
+			var data = new Date();
+
+			var ano  = data.getFullYear();
+			var mes  = data.getMonth()+1;
+			var dia  = data.getDate();
+			var hora = data.getHours();
+			var min  = data.getMinutes(); 
+
+			var numProtocolo = ano+''+mes+''+dia+''+hora+''+min;
+
+			$('#numProtocolo2').html(numProtocolo);
+			$('#protocolo2').show();
+		}
+
+
+	</script>
+
+</head>
+<body>
+
+	<div class="container" style="margin: 20px auto">
+		<p class="font-weight-bold" style="font-size: 22px;">Selecione uma opção </p>
+		<div class="row">
+			<div class="col-md-6" style="border: 1px #ededed solid;">
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+				  <label class="form-check-label" for="exampleRadios1">
+				    Trancamento geral de Matricula.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+				  <label class="form-check-label" for="exampleRadios2">
+				    Trancamento parcial de Matrícula <br>(Preencher o quadro A).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+				  <label class="form-check-label" for="exampleRadios3">
+				    Regime Excepcional (Preencher o quadro A) <br>D.L 104459 - Lei 6.202/75.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+				  <label class="form-check-label" for="exampleRadios4">
+				    Inclusão de Disciplina (Preencher o Quadro A).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+				  <label class="form-check-label" for="exampleRadios5">
+				    Histórico Escolar.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6">
+				  <label class="form-check-label" for="exampleRadios6">
+				    Programa de Disciplina.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios7" value="option7">
+				  <label class="form-check-label" for="exampleRadios7">
+				    Guia de transferência (Anexar atestado de vaga).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios8" value="option8">
+				  <label class="form-check-label" for="exampleRadios8">
+				    Atestado de Matrícula.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios9" value="option9">
+				  <label class="form-check-label" for="exampleRadios9">
+				    Mudança de Turma.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios10" value="option10">
+				  <label class="form-check-label" for="exampleRadios10">
+				    Correção do Histórico Escolar.
+				  </label>
+				</div>
+
+
+				<div style="border: none;" class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios11" value="option11">
+				  <label class="form-check-label" for="exampleRadios11">
+				   Aproveitamento de disciplina (Preencher o quadro B).
+				  </label>
+				</div>
+			</div>
+
+			<!-- ***************************************************************************************************** -->
+
+			<div class="col-md-6" style="border: 1px #ededed solid; border-left: none;">
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios12" value="option12">
+				  <label class="form-check-label" for="exampleRadios12">
+				    Prova Repositiva (Preencher o quadro A).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios13" value="option13">
+				  <label class="form-check-label" for="exampleRadios13">
+				   Alteração de dados cadastrais (Anexar documento).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios14" value="option14">
+				  <label class="form-check-label" for="exampleRadios14">
+				    Solicitação de colação de grau.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios15" value="option15">
+				  <label class="form-check-label" for="exampleRadios15">
+				    Solicitação de diploma (Anexar cópia do RG).
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios16" value="option16">
+				  <label class="form-check-label" for="exampleRadios16">
+				    Solicitação de defesa de TCC.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios17" value="option17">
+				  <label class="form-check-label" for="exampleRadios17">
+				    Revisão de avaliação.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios18" value="option18">
+				  <label class="form-check-label" for="exampleRadios18">
+				    Rematricula Fora do Prazo.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios19" value="option19">
+				  <label class="form-check-label" for="exampleRadios19">
+				    Aproveitamento de disciplina.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios20" value="option20">
+				  <label class="form-check-label" for="exampleRadios20">
+				    Analise de Status acadêmico.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios21" value="option21">
+				  <label class="form-check-label" for="exampleRadios21">
+				    Solicitação de certificado.
+				  </label>
+				</div>
+
+
+				<div class="form-check lado-esquerdo">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios22" value="option22">
+				  <label class="form-check-label" for="exampleRadios22">
+				   Atestado de frequência.
+				  </label>
+				</div>
+
+				<div style="padding: 10px">
+					<label>Outros: </label>
+					<input class="form-control" type="text">
+				</div>
+
+			</div>
+		</div>
+
+		<div id="protocolo" class="protocolo">
+			<p style="margin: 0 auto; color: #3f3f3f;" class="font-weight-bold">Numero de Protocolo</p>
+
+			<p id="numProtocolo" style="margin: 0 auto; font-size: 25px; color: #25db3a;" class="font-weight-bold"></p>
+		</div>
+
+		<div class="row align-center">
+			<a style="color: #fff; margin: 0 auto;" href="#tabelaA"><button onclick="selecionar('tabelaA')" type="button" class="btn btn-primary btn-selecionar">Selecionar</button></a>
+		</div>
+
+
+		<div id="tabelaA" class="tabelaA">
+			<p style="color: #f4735d; font-size: 25px;" class="font-weight-bold text-center">Preencha o quadro A</p>
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col-md-8">Código</th>
+			      <th scope="col-md-2">Turma</th>
+			      <th scope="col-md-2">Disciplina</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			    </tr>
+			    <tr>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			    </tr>
+			    <tr>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			      <td><input class="form-control input" type="text"></td>
+			    </tr>
+			  </tbody>
+			</table>
+
+			<div id="protocolo2" class="protocolo">
+				<p style="margin: 0 auto; color: #3f3f3f;" class="font-weight-bold">Numero de Protocolo</p>
+
+				<p id="numProtocolo2" style="margin: 0 auto; font-size: 25px; color: #25db3a;" class="font-weight-bold">5415415A4S5A</p>
+			</div>
+
+			<div class="row align-center">
+			<button onclick="ok();" class="btn btn-primary btn-OK">Enviar</button>
+		</div>
+
+			
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

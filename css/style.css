@@ -1,0 +1,35 @@
+.lado-esquerdo {
+	color: black;
+	border-bottom: 1px solid #f7f7f7;
+	border-top: 1px solid #f7f7f7;
+	padding: 12px 30px;
+}
+
+.btn-selecionar{
+	margin: 35px auto;
+	padding: 12px 42px;
+}
+
+.input{
+	width: 310px;
+	
+}
+
+.tabelaA{
+	margin: 60px 0 50px 0;
+	display: none;
+}
+
+.btn-OK{
+	margin: 20px auto;
+	padding: 10px 30px;
+	text-align: center;
+}
+
+.protocolo{
+	display: none;
+	margin-top: 20px;
+	border: 1px solid #25db3a;
+	padding: 20px 100px; 
+	text-align: center;
+}
